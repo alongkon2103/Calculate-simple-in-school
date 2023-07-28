@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebSite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CalculateSIS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Area</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./math.html" aria-current="page">Math</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./grade.html">Grade</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <h1 class="text-center mt-5">Math calculator</h1>
+    <div class="grid mb-5"  >
+        <div class="item" style="border: 0.1px solid black;" class="overflow-hidden"data-bs-toggle="modal" data-bs-target="#SquareRoot" >
+          <div class="content ">
+            <div class="overflow-hidden">
+            <img class="priceimg" src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQsB6Mf9PbYc9kEhf01X4DneAhWTpYY8kBdigGIFjIj9-z1R0j6EmD21SqmrpF8jsl3" width="200px" height="200px" alt="">
+        </div>
+            <h4 class="text-center mt-3">Square root </h4>
+          </div>
+        </div>
+        <div class="item" style="border: 0.1px solid black;" class="overflow-hidden" data-bs-toggle="modal" data-bs-target="#Base_num">
+            <div class="content ">
+              <div class="overflow-hidden">
+              <img class="priceimg" src="./img/base_num.png" width="200px" height="200px" alt="">
+          </div>
+              <h4 class="text-center mt-3">Base number</h4>
+            </div>
+          </div>
+          <div class="item" style="border: 0.1px solid black;" class="overflow-hidden" data-bs-toggle="modal" data-bs-target="#multiplication">
+            <div class="content ">
+              <div class="overflow-hidden">
+              <img class="priceimg" src="https://www.wolfram.com/programming-lab/explorations/multiplication-tables/images/O_6.png" width="200px" height="200px" alt="">
+          </div>
+              <h4 class="text-center mt-3">Multiplication table</h4>
+            </div>
+          </div>
+
+     
+      </div>
+    </div>
+
+    <!-- Modal SqureRoot -->
+<div class="modal fade" id="SquareRoot" tabindex="-1" aria-labelledby="SquareRoot" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Square root</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Integer number" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputSquareroot">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="squreroot(document.getElementById('inputSquareroot').value)">Calculate</button>
+              </div>
+              <h1 class="text-center" id="result_squareroot"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal Basenum -->
+<div class="modal fade" id="Base_num" tabindex="-1" aria-labelledby="Base_num" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Base number</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Integer number " aria-label="Recipient's username" aria-describedby="button-addon2" id="input_base">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="Basenumber(document.getElementById('input_base').value) ">Calculate</button>
+              </div>
+              <div id="Basenumber_table"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal multiplication -->
+<div class="modal fade" id="multiplication" tabindex="-1" aria-labelledby="multiplication" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Multiplication Table</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input number" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputMultiplication">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="Multiplication(document.getElementById('inputMultiplication').value)">Calculate</button>
+              </div>
+              <div class="text-center" id="result_multiplication"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

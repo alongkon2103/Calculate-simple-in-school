@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebSite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark"> 
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CalculateSIS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html" aria-current="page">Area</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./math.html">Math</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./grade.html">Grade</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <h1 class="text-center mt-5">Area calculator</h1>
+    <div class="grid mb-5"  >
+        <div class="item" style="border: 0.1px solid black;" class="overflow-hidden"data-bs-toggle="modal" data-bs-target="#Circle" >
+          <div class="content ">
+            <div class="overflow-hidden">
+            <img class="priceimg" src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcR6XDDIEs3ADIIMe-ZdDG6sLyQ7Pyiu-yBvrWzuvGvpDhNo-GG_91CV0tesc0E7ZLS_" width="200px" height="200px" alt="">
+        </div>
+            <h4 class="text-center mt-3">Circle Calculator</h4>
+          </div>
+        </div>
+        <div class="item" style="border: 0.1px solid black;" class="overflow-hidden" data-bs-toggle="modal" data-bs-target="#Triangle">
+            <div class="content ">
+              <div class="overflow-hidden">
+              <img class="priceimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Regular_triangle.svg/800px-Regular_triangle.svg.png" width="200px" height="200px" alt="">
+          </div>
+              <h4 class="text-center mt-3">Triangle Calculator</h4>
+            </div>
+          </div>
+          <div class="item" style="border: 0.1px solid black;" class="overflow-hidden" data-bs-toggle="modal" data-bs-target="#Squre">
+            <div class="content ">
+              <div class="overflow-hidden">
+              <img class="priceimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/800px-Square_-_black_simple.svg.png" width="200px" height="200px" alt="">
+          </div>
+              <h4 class="text-center mt-3">Square Calculator</h4>
+            </div>
+          </div>
+          <div class="item" style="border: 0.1px solid black;" class="overflow-hidden" data-bs-toggle="modal" data-bs-target="#Parallelogram">
+            <div class="content ">
+              <div class="overflow-hidden">
+              <img class="priceimg" src="https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A4719a0c49d56c67497f180b130b9528a98d6f1c3d5717b1a091d4d84%2BIMAGE_TINY%2BIMAGE_TINY.1" width="200px" height="200px" alt="">
+          </div>
+              <h4 class="text-center mt-3">Parallelogram Calculator</h4>
+            </div>
+          </div>
+          <div class="item" style="border: 0.1px solid black;" class="overflow-hidden" data-bs-toggle="modal" data-bs-target="#Trapezoid">
+            <div class="content ">
+              <div class="overflow-hidden">
+              <img class="priceimg" src="https://qph.cf2.quoracdn.net/main-qimg-bad9425be8cbb52adc331548afaa1802" width="200px" height="200px" alt="">
+          </div>
+              <h4 class="text-center mt-3">Trapezoid Calculator</h4>
+            </div>
+          </div>
+
+     
+      </div>
+    </div>
+
+    <!-- Modal Circ;e -->
+<div class="modal fade" id="Circle" tabindex="-1" aria-labelledby="Circle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Area Circle Calculator</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Radius" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvalue">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="circle(document.getElementById('inputvalue').value)">Calculate</button>
+              </div>
+              <h1 class="text-center" id="result_circle"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal Triangle -->
+<div class="modal fade" id="Triangle" tabindex="-1" aria-labelledby="Triangle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Area Triangle Calculator</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="number" max="10000000000" class="form-control shadow-none" placeholder="Input Base"  aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvaluebase">
+              </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Height" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvalueheight">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="Triangle(document.getElementById('inputvaluebase').value,document.getElementById('inputvalueheight').value)">Calculate</button>
+              </div>
+              <h1 class="text-center" id="result_triangle"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal Squre -->
+<div class="modal fade" id="Squre" tabindex="-1" aria-labelledby="Squre" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Area Squre Calculator</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Side" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvaluebase2">
+              </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Side" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvalueheight2">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="Squre(document.getElementById('inputvaluebase2').value,document.getElementById('inputvalueheight2').value)">Calculate</button>
+              </div>
+              <h1 class="text-center" id="result_square"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="modal fade" id="Parallelogram" tabindex="-1" aria-labelledby="Parallelogram" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Area Parallelogram Calculator</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Base" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvaluebase3">
+              </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Height" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvalueheight3">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="Parallelogram(document.getElementById('inputvaluebase3').value,document.getElementById('inputvalueheight3').value)">Calculate</button>
+              </div>
+              <h1 class="text-center" id="result_parallelogram"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="modal fade mb-5" id="Trapezoid" tabindex="-1" aria-labelledby="Trapezoid" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Area Trapezoid Calculator</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Base" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvaluebase4">
+              </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control shadow-none" placeholder="Input Height" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputvalueheight4">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="Trapezoid(document.getElementById('inputvaluebase4').value,document.getElementById('inputvalueheight4').value)">Calculate</button>
+              </div>
+              <h1 class="text-center" id="result_trapezoid"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

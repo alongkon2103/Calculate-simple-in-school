@@ -1,0 +1,28 @@
+.navbar-custom {
+    background-color: #3AAFA9;
+}
+*{
+    font-family: 'Belanosima', sans-serif;
+}
+.grid {
+display: grid;
+grid-template-columns:  repeat(auto-fit,minmax(400px,1fr));
+column-gap: 16px;
+row-gap: 30px;
+}
+
+.content {
+color: #242424;
+font-weight: 600;
+text-align: center;
+padding: 5%;
+}
+.item:hover{
+box-shadow: -2px 5px 32px -11px rgba(0,0,0,0.86);
+}
+.item{
+transition: 0.2s;
+}
+body{
+overflow-x: hidden;
+}
